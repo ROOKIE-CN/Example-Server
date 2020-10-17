@@ -10,9 +10,7 @@ class TestController{
 
     @GetMapping("index")
     fun index() : String{
-
         return "rookie-example project start."
-
     }
 }
 
