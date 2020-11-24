@@ -1,24 +1,26 @@
 package cc.example.rookie.entity;
 
+import lombok.AllArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "parameter_options")
-public class ParameterOption {
+@Table(name = "malfunction")
+public class Malfunction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
 
-    public int parent;
-
     public String content;
 
-    public ParameterOption() {
+    public double eval;
+
+    public Malfunction() {
     }
 
-    public ParameterOption(int parent, String content) {
-        this.parent = parent;
+    public Malfunction(String content, double eval) {
         this.content = content;
+        this.eval = eval;
     }
 }
